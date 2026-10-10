@@ -13,7 +13,7 @@ const App: React.FC = () => {
       <Header />
       <main id="main" tabIndex={-1}>
         <section className="hero page-width" aria-labelledby="hero-title">
-          <h1 id="hero-title">MarkV<span>.tech</span></h1>
+          <h1 id="hero-title"><img className="hero-logo" src="/markv-logo-horizontal.png" alt="MarkV.tech — Soluções que constroem o futuro" /></h1>
           <p className="hero-statement">Um espaço para projetos<br className="desktop-break" /> de tecnologia.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#projeto">Explorar o projeto <span aria-hidden="true">↗</span></a>
