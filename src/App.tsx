@@ -14,22 +14,22 @@ const App: React.FC = () => {
       <main id="main" tabIndex={-1}>
         <section className="hero page-width" aria-labelledby="hero-title">
           <h1 id="hero-title"><img className="hero-logo" src="/markv-logo-horizontal.png" alt="MarkV.tech — Soluções que constroem o futuro" /></h1>
-          <p className="hero-statement">Um espaço para projetos<br className="desktop-break" /> de tecnologia.</p>
+          <p className="hero-statement">Tecnologia e IA aplicada<br className="desktop-break" /> para construir soluções.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#projeto">Explorar o projeto <span aria-hidden="true">↗</span></a>
+            <a className="button button-primary" href="#projeto">Explorar os projetos <span aria-hidden="true">↗</span></a>
             <a className="text-link" href="#contato">Informações de contato <span aria-hidden="true">↓</span></a>
           </div>
           <div className="hero-bottom">
-            <p>Portfólio digital · React + TypeScript</p>
+            <p>IA aplicada · Automações · Sistemas</p>
             <label className="motion-control"><input type="checkbox" checked={paused} onChange={event => setPaused(event.target.checked)} /> Pausar animação</label>
           </div>
         </section>
         <section id="sobre" className="about section page-width" aria-labelledby="about-title">
           <h2 id="about-title">Sobre este espaço</h2>
           <div className="section-copy">
-            <p className="lead">Tecnologia, identidade<br className="desktop-break" /> e código em movimento.</p>
-            <p>Este portfólio parte da identidade original da MarkV.tech: fundo preto, verde e uma chuva de caracteres inspirada em Matrix.</p>
-            <p>A base é uma aplicação em React e TypeScript. Aqui, o próprio site é o primeiro projeto apresentado.</p>
+            <p className="lead">Projetos que conectam<br className="desktop-break" /> tecnologia e necessidades reais.</p>
+            <p>A MarkV Tech atua com especialização em inteligência artificial aplicada, agentes, orquestração, automações, integrações, BI e sistemas sob medida.</p>
+            <p>Da exploração de uma ideia à construção de ferramentas, reunimos código e contexto para desenvolver soluções úteis. Este espaço apresenta nossa atuação técnica de forma pública.</p>
           </div>
         </section>
         <Portfolio />
@@ -42,7 +42,7 @@ const App: React.FC = () => {
           </div>
         </section>
       </main>
-      <footer className="site-footer page-width"><a href="#top" aria-label="MarkV.tech — voltar ao início">MarkV.tech</a><p>Portfólio em construção. Novos projetos serão incluídos após revisão.</p><a href="#top">Voltar ao início <span aria-hidden="true">↑</span></a></footer>
+      <footer className="site-footer page-width"><a href="#top" aria-label="MarkV.tech — voltar ao início">MarkV.tech</a><p>IA aplicada, automações e sistemas sob medida.</p><a href="#top">Voltar ao início <span aria-hidden="true">↑</span></a></footer>
     </div>
   );
 };
