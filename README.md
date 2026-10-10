@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# MarkV Tech — landing local
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cópia de trabalho exclusiva de `markvtech-portfolio`, preservando a fonte em `/Users/00markin/Codes/MarkV.Tech/markvtech-portfolio`. Estado: implementação local com verificações não interativas aprovadas; **QA visual e revisão editorial pendentes**. Não declarar pronta para publicação.
 
-## Available Scripts
+## Conteúdo e identidade
 
-In the project directory, you can run:
+Paleta preta/verde e chuva Matrix reutilizadas. O repositório não contém cases comerciais ou portfólio completo. O próprio site é o único projeto apresentado, com tecnologias verificáveis na fonte. Sem clientes, resultados, depoimentos, telefone, e-mail ou formulário inventados. Conforme a orientação posterior, a CTA de contato aponta para `#contato`, sem redirecionar circularmente à própria homepage. A seção informa claramente que o canal direto está em definição e apresenta `markv.tech` apenas como endereço do portfólio. Ainda falta um destino de contato real confirmado pelo usuário.
 
-### `npm start`
+Navegação: Sobre / Projeto / Contato. Seções: abertura, apresentação, projeto do próprio site, contato. Controles: detalhes do projeto, pausar animação e âncoras. Tipografia Arial/sistema, sem fontes externas. Um único canvas, pausa por visibilidade, movimento reduzido e limpeza no desmontar. React 18 usa `createRoot`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Verificações
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+./node_modules/.bin/tsc --noEmit --incremental false
+./node_modules/.bin/eslint src --max-warnings 0
+CI=true npm test -- --watchAll=false --runInBand --no-cache --watchman=false --detectOpenHandles
+CI=true GENERATE_SOURCEMAP=false npm run build
+```
 
-### `npm test`
+Os comandos passaram. Seis testes em duas suítes; ver `qa/VALIDACAO.md`. Nenhuma dependência foi adicionada ou atualizada. Uma instalação limpa com `npm ci --ignore-scripts --no-audit --no-fund` também passou nos quatro comandos, sem depender dos links existentes e sem modificar os manifests. Apenas pacotes de registry.npmjs.org, nas versões do lockfile. Os scripts de instalação foram desativados; nenhum foi necessário para as verificações aprovadas. Logs em `qa/clean-install-evidence/`; instalação/cache temporários removidos após verificação. A instalação habitual do rascunho ainda reutiliza os links anteriores; não versionar `node_modules` ou caches.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Arquivos principais
 
-### `npm run build`
+- `src/App.tsx`: composição e abertura, apresentação e contato.
+- `src/components/Header.tsx`: marca e navegação.
+- `src/components/Portfolio.tsx`: projeto e detalhes expansíveis.
+- `src/components/MatrixBackground.tsx`: correção de canvas preservada, com pausa manual.
+- `src/styles.css`: identidade e regras desktop/mobile.
+- `src/index.tsx`: montagem React 18.
+- `public/index.html`, `public/manifest.json`, `public/favicon.svg`: idioma, metadados e identificação.
+- Testes em `src/App.test.tsx` e `src/components/MatrixBackground.test.tsx`.
+- `build/`: build local verificado, sem publicação.
+- `qa/`: evidências resumidas e patch para revisão.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Próximo passo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Após liberar o navegador, usar preview local temporário (encerrar ao concluir), validar desktop 1440×900 e 1280×800 e mobile 390×844 e 320×740. Percorrer âncoras, teclado, detalhes, pausa, movimento reduzido, rotação e scroll. Registrar screenshots e verificar legibilidade, overflow e fidelidade ao preto/verde. Revisar o texto e confirmar e-mail, telefone ou outro destino real antes de habilitar contato efetivo. Depois integrar o patch ao repositório existente, repetir verificações e publicar somente com autorização explícita, sem criar repo duplicado ou alterar DNS/serviços alheios. Nenhum servidor foi iniciado neste Work.
