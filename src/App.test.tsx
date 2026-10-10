@@ -13,9 +13,10 @@ test('navigation resolves to sections and contact does not point back to the can
   expect(screen.getByRole('region', { name: 'Projetos em destaque' })).toHaveAttribute('id', 'projeto');
   expect(screen.getByRole('region', { name: 'Contato' })).toHaveAttribute('id', 'contato');
   const contacts = screen.getAllByRole('link').filter(link => link.getAttribute('href')?.startsWith('https:'));
-  expect(contacts).toHaveLength(0);
+  expect(contacts).toHaveLength(1);
+  expect(contacts[0]).toHaveAttribute('href', 'https://markv.company');
   expect(screen.getByRole('link', { name: 'Informações de contato' })).toHaveAttribute('href', '#contato');
-  expect(screen.getByText('Este portfólio está em construção. O canal de contato será informado aqui após confirmação.')).toBeVisible();
+  expect(screen.getByText('O contato das marcas e projetos fica centralizado na MarkV Company.')).toBeVisible();
   expect(screen.getByText('markv.tech')).toBeVisible();
   expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
 });

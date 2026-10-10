@@ -36,8 +36,9 @@ const App: React.FC = () => {
         <section id="contato" className="contact section page-width" aria-labelledby="contact-title">
           <h2 id="contact-title">Contato</h2>
           <div className="section-copy">
-            <p className="lead">Um canal direto,<br className="desktop-break" /> em definição.</p>
-            <p>Este portfólio está em construção. O canal de contato será informado aqui após confirmação.</p>
+            <p className="lead">Encontre a MarkV<br className="desktop-break" /> no nosso hub.</p>
+            <p>O contato das marcas e projetos fica centralizado na MarkV Company.</p>
+            <p><a className="text-link" href="https://markv.company">Contato pela MarkV Company <span aria-hidden="true">↗</span></a></p>
             <p>Endereço do portfólio: <span className="canonical-address">markv.tech</span></p>
           </div>
         </section>
