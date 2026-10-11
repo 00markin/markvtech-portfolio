@@ -12,7 +12,7 @@ test('navigation resolves to sections and contact does not point back to the can
   expect(screen.getByRole('region', { name: 'Sobre este espaço' })).toHaveAttribute('id', 'sobre');
   expect(screen.getByRole('region', { name: 'Projetos em destaque' })).toHaveAttribute('id', 'projeto');
   expect(screen.getByRole('region', { name: 'Contato' })).toHaveAttribute('id', 'contato');
-  const contacts = screen.getAllByRole('link').filter(link => link.getAttribute('href')?.startsWith('https:'));
+  const contacts = within(screen.getByRole('region', { name: 'Contato' })).getAllByRole('link').filter(link => link.getAttribute('href')?.startsWith('https:'));
   expect(contacts).toHaveLength(1);
   expect(contacts[0]).toHaveAttribute('href', 'https://markv.company');
   expect(screen.getByRole('link', { name: 'Informações de contato' })).toHaveAttribute('href', '#contato');
