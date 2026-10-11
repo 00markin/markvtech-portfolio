@@ -42,20 +42,18 @@ const App: React.FC = () => {
               <li><strong>Um recorte que possa ser testado.</strong> Começar por um fluxo delimitado, com critérios de aceitação e revisão humana nos pontos que exigem julgamento.</li>
               <li><strong>Integração e manutenção.</strong> Tratar falhas, documentar decisões e separar um experimento de uma solução pronta para uso faz parte do trabalho de engenharia.</li>
             </ol>
-            <p>Agentes, integrações e painéis são caminhos possíveis. A escolha depende do contexto, dos dados disponíveis e do que é possível verificar.</p>
+            <p>Agentes, integrações e painéis são caminhos possíveis. Um objetivo pode ser preparar um relatório periódico a partir de dados autorizados, centralizar informações em painéis inteligentes para acompanhar indicadores e destacar o que precisa de atenção ou automatizar uma etapa repetitiva com revisão humana. Um painel pode ser útil pela organização da informação, sem depender de IA. São exemplos para avaliar, não entregas comprovadas nem ganhos garantidos; a escolha depende do que é possível verificar.</p>
           </div>
         </section>
-        <section id="portfolio-publico" className="section page-width" aria-labelledby="public-title">
-          <div className="project-heading"><h2 id="public-title">Projetos públicos, contextos diferentes</h2><p>Conteúdo e experiências abertas</p></div>
+        <section id="qualidade" className="section page-width" aria-labelledby="quality-title">
+          <div className="project-heading"><h2 id="quality-title">Qualidade também é parte da solução</h2><p>Critérios para construir e evoluir</p></div>
           <div className="portfolio-grid">
-            <article className="portfolio-card"><h3>DoceMello</h3><p>Uma apresentação editorial de receitas e afeto. Conteúdo, identidade e galeria organizados em uma experiência web.</p><a className="text-link" href="https://docemello.com.br/">Explorar DoceMello</a></article>
-            <article className="portfolio-card"><h3>MarkV Space</h3><p>Uma proposta de aprender fazendo e compartilhar descobertas. A comunidade permanece em construção.</p><a className="text-link" href="https://markv.space/">Conhecer o Space</a></article>
-            <article className="portfolio-card"><h3>Vovó Zone</h3><p>Uma ideia de automação residencial acessível apresentada como proposta, sem produto disponível ou instalação prometida.</p><a className="text-link" href="https://vovozone.com.br/">Entender a proposta</a></article>
-            <article className="portfolio-card"><h3>Localhosts</h3><p>Uma pausa no cotidiano do desenvolvimento: humor editorial e uma interação simples para percorrer as amostras.</p><a className="text-link" href="https://localhosts.com.br/">Visitar Localhosts</a></article>
+            <article className="portfolio-card"><h3>Testes e performance</h3><p>Testes funcionais ajudam a conferir o comportamento esperado. Medições de performance, em ambiente e escopo combinados, podem revelar gargalos antes de escolher uma otimização.</p><p>Exemplo ilustrativo: de uma etapa percebida como lenta para um diagnóstico medido e uma mudança que possa ser comparada com o ponto de partida.</p></article>
+            <article className="portfolio-card"><h3>Arquitetura e observabilidade</h3><p>Separar responsabilidades em módulos e organizar registros de execução ajuda a localizar falhas e acompanhar o que precisa de atenção. Painéis e relatórios devem partir de perguntas úteis, não só de dados disponíveis.</p><p>Exemplo ilustrativo: de informações espalhadas para uma visão de indicadores e um registro que ajude a investigar o fluxo.</p></article>
+            <article className="portfolio-card"><h3>Revisão de segurança</h3><p>Revisar acessos, tratamento de informações e dependências pode orientar cuidados e correções. O recorte e os limites da revisão precisam ser definidos; nenhuma verificação significa segurança absoluta.</p></article>
+            <article className="portfolio-card"><h3>Documentação e evolução</h3><p>Registrar decisões, critérios de teste e pontos de manutenção facilita uma próxima mudança. Evoluir em etapas permite revisar o que funciona antes de ampliar o escopo.</p><p>Estas são capacidades e objetivos possíveis, sem alegação de casos entregues, certificação ou resultados garantidos.</p></article>
           </div>
-          <p className="portfolio-note">Estas páginas mostram projetos públicos do universo MarkV. Não são estudos de caso de clientes nem comprovação de resultados de IA ou automação.</p>
         </section>
-
         <section id="contato" className="contact section page-width" aria-labelledby="contact-title">
           <h2 id="contact-title">Contato</h2>
           <div className="section-copy">
